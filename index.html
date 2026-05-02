@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TR Harumi | JLPT Preparation</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lexend:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#f7ddea",
+                        "surface-container": "#eeeeed",
+                        "secondary": "#586062",
+                        "inverse-surface": "#2f3130",
+                        "tertiary-fixed-dim": "#f2b8bc",
+                        "surface-dim": "#dadad9",
+                        "primary": "#675b5d",
+                        "on-tertiary-container": "#8c5d61",
+                        "on-secondary-fixed": "#161d1f",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f1f0f0",
+                        "primary-fixed": "#efdee0",
+                        "tertiary-container": "#ffe5e6",
+                        "on-surface": "#1a1c1c",
+                        "outline-variant": "#e8d7de",
+                        "on-background": "#1a1c1c",
+                        "secondary-container": "#dae1e3",
+                        "outline": "#bfa7b0",
+                        "on-surface-variant": "#5e5056",
+                        "surface-container-high": "#f7f3f5",
+                        "surface-container-low": "#fcf9fa",
+                        "surface": "#ffffff",
+                        "background": "#ffffff",
+                        "tertiary": "#d85ca6",
+                        "dark-ink": "#14070f"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Lexend", "sans-serif"],
+                        "headline-lg": ["Manrope", "sans-serif"],
+                        "label-md": ["Lexend", "sans-serif"],
+                        "body-md": ["Lexend", "sans-serif"],
+                        "headline-md": ["Manrope", "sans-serif"],
+                        "body-lg": ["Lexend", "sans-serif"],
+                        "headline-xl": ["Manrope", "sans-serif"]
+                    },
+                    boxShadow: {
+                        ghost: "0 24px 48px -18px rgba(224, 167, 171, 0.12)",
+                        soft: "0 12px 28px rgba(218, 92, 166, 0.12)"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-dark-ink">
+
+
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-primary-container/70">
+        <div class="max-w-[1080px] mx-auto px-6 lg:px-8 flex justify-between items-center h-16">
+            <a href="#home" class="text-[19px] sm:text-[21px] font-extrabold tracking-tight text-dark-ink">
+                <span class="text-tertiary">TR</span> Harumi
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#levels" class="nav-link">Levels</a>
+                <a href="#review" class="nav-link">Review</a>
+                <a href="#about" class="nav-link">About</a>
+                <button id="navContactBtn" class="nav-link">Contact</button>
+
+                <button id="enrollBtn"
+                    class="bg-tertiary text-white px-6 py-2.5 rounded-xl font-semibold text-[14px] hover:opacity-90 transition-all shadow-soft">
+                    Enroll Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+
+        <section id="home" class="section-wrap pt-10 md:pt-12 lg:pt-14 pb-10 md:pb-12 lg:pb-14">
+            <div class="grid lg:grid-cols-[1.08fr_0.92fr] gap-8 lg:gap-10 items-center">
+
+                <div>
+                    <div
+                        class="inline-flex items-center rounded-full bg-primary-container px-4 py-2 text-[13px] font-semibold tracking-wide text-dark-ink mb-5">
+                        JLPT Preparation
+                    </div>
+
+                    <h1 class="hero-title font-headline-xl text-dark-ink mb-5 font-extrabold">
+                        Learn Japanese<br>
+                        with <span class="text-tertiary">TR Harumi</span>
+                    </h1>
+
+                    <p class="max-w-[560px] text-[16px] md:text-[17px] leading-[1.65] text-on-surface-variant mb-7">
+                        Expert JLPT tutoring from N5 to N2. Join structured courses designed to help you achieve fluency
+                        and pass your JLPT exam with confidence.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3">
+                        <button id="heroCoursesBtn"
+                            class="bg-tertiary text-white px-7 py-3 rounded-xl font-semibold text-[15px] hover:opacity-90 transition-all shadow-soft">
+                            View Courses
+                        </button>
+
+                        <button id="heroLearnBtn"
+                            class="bg-[#f3e8ed] text-dark-ink px-7 py-3 rounded-xl font-semibold text-[15px] hover:bg-primary-container transition-all">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative hero-media-wrap">
+                    <div
+                        class="relative ml-auto max-w-[400px] bg-white rounded-[26px] p-3.5 border border-primary-container/70 shadow-ghost">
+                        <div class="relative overflow-hidden rounded-[22px] bg-primary-container/50">
+                            <img src="Pookie.jpg" alt="TR Harumi" class="w-full h-[460px] object-cover object-center" />
+
+                            <div
+                                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#14070f]/75 via-[#14070f]/25 to-transparent p-5">
+                                <div
+                                    class="inline-flex bg-white/90 text-tertiary rounded-full px-3.5 py-1 text-[12px] font-semibold mb-2.5">
+                                    Japanese Tutor
+                                </div>
+
+                                <h2 class="text-white text-[24px] font-extrabold leading-tight">
+                                    TR Harumi
+                                </h2>
+
+                                <p class="text-white/90 text-[13px] mt-1 leading-5">
+                                    Helping students prepare confidently for JLPT N5 to N2.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="levels" class="section-wrap py-10 md:py-12 lg:py-14">
+            <div class="text-center max-w-[680px] mx-auto mb-9">
+                <h2 class="section-title text-dark-ink mb-3">Choose Your Level</h2>
+                <p class="section-subtitle text-on-surface-variant">
+                    From beginner to advanced, we have the perfect course for your JLPT preparation journey.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+
+                <div class="level-v2-card level-n5 group cursor-pointer" data-level="N5">
+                    <div class="jp-symbol text-[#0ba34a]">ひ</div>
+                    <div class="level-pill">N5</div>
+                    <h3 class="level-heading">Beginner</h3>
+                    <p class="level-text">Start your Japanese journey with basic vocabulary and grammar.</p>
+
+                    <div class="level-meta">
+                        <div class="level-meta-item">
+                            <span class="material-symbols-outlined">schedule</span>
+                            <span>0 time slots</span>
+                        </div>
+                        <div class="level-meta-item">
+                            <span class="material-symbols-outlined">menu_book</span>
+                            <span>150,000 Ks / month</span>
+                        </div>
+                    </div>
+
+                    <div class="level-link text-[#0ba34a]">View Details →</div>
+                </div>
+
+                <div class="level-v2-card level-n4 group cursor-pointer" data-level="N4">
+                    <div class="jp-symbol text-[#225df6]">漢</div>
+                    <div class="level-pill">N4</div>
+                    <h3 class="level-heading">Elementary</h3>
+                    <p class="level-text">Build upon basics with more vocabulary and grammar patterns.</p>
+
+                    <div class="level-meta">
+                        <div class="level-meta-item">
+                            <span class="material-symbols-outlined">schedule</span>
+                            <span>0 time slots</span>
+                        </div>
+                        <div class="level-meta-item">
+                            <span class="material-symbols-outlined">menu_book</span>
+                            <span>150,000 Ks / month</span>
+                        </div>
+                    </div>
+
+                    <div class="level-link text-[#225df6]">View Details →</div>
+                </div>
+
+                <div class="level-v2-card level-n3 group cursor-pointer" data-level="N3">
+                    <div class="jp-symbol text-[#e48500]">文</div>
+                    <div class="level-pill">N3</div>
+                    <h3 class="level-heading">Intermediate</h3>
+                    <p class="level-text">Develop intermediate skills for daily communication and JLPT success.</p>
+
+                    <div class="level-meta">
+                        <div class="level-meta-item">
+                            <span class="material-symbols-outlined">schedule</span>
+                            <span>0 time slots</span>
+                        </div>
+                        <div class="level-meta-item">
+                            <span class="material-symbols-outlined">menu_book</span>
+                            <span>180,000 Ks / month</span>
+                        </div>
+                    </div>
+
+                    <div class="level-link text-[#e48500]">View Details →</div>
+                </div>
+
+                <div class="level-v2-card level-n2 group cursor-pointer" data-level="N2">
+                    <div class="jp-symbol text-[#ff0b4f]">読</div>
+                    <div class="level-pill">N2</div>
+                    <h3 class="level-heading">Advanced</h3>
+                    <p class="level-text">Master advanced grammar and complex reading materials with confidence.</p>
+
+                    <div class="level-meta">
+                        <div class="level-meta-item">
+                            <span class="material-symbols-outlined">schedule</span>
+                            <span>0 time slots</span>
+                        </div>
+                        <div class="level-meta-item">
+                            <span class="material-symbols-outlined">menu_book</span>
+                            <span>220,000 Ks / month</span>
+                        </div>
+                    </div>
+
+                    <div class="level-link text-[#ff0b4f]">View Details →</div>
+                </div>
+
+            </div>
+        </section>
+        <section id="review" class="section-wrap py-10 md:py-12 lg:py-14">
+            <div class="text-center max-w-[680px] mx-auto mb-9">
+                <h2 class="section-title text-dark-ink mb-3">Student Reviews</h2>
+                <p class="section-subtitle text-on-surface-variant">
+                    Real feedback from students who studied with TR Harumi.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+                <div class="review-card">
+
+                    
+                    <h3 class="review-name">
+                        Chan Myae-San
+                    </h3>
+
+                   
+                    <div class="review-gallery">
+                        <img src="chan1.jpg" class="review-img" alt="review">
+                        <img src="chan2.jpg" class="review-img" alt="review">
+                    </div>
+
+                    
+                    <p class="review-desc">
+                        Completed N5 in one month and passed NAT test.
+                    </p>
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section id="about" class="section-wrap py-8 md:py-10 lg:py-12">
+            <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-10 items-center">
+
+                <div>
+                    <h2 class="text-[30px] md:text-[38px] font-extrabold text-dark-ink mb-3">
+                        About TR Harumi
+                    </h2>
+
+                    <p class="text-[15px] leading-[1.65] text-on-surface-variant mb-4 max-w-[620px]">
+                        I am a Japanese language teacher specializing in JLPT preparation. I achieved full marks in N4
+                        and scored 157 in N3, and I am currently at an N1 level.
+                    </p>
+
+                    <p class="text-[15px] leading-[1.65] text-on-surface-variant mb-6 max-w-[620px]">
+                        I provide structured lessons that combine clear grammar explanations with practical conversation
+                        practice, helping students succeed in both the JLPT exam and real-life communication.
+                    </p>
+                </div>
+
+                <div class="quote-card relative overflow-hidden">
+                    <div
+                        class="absolute -top-3 left-8 text-[50px] font-extrabold text-[#efbfd5] opacity-50 select-none">
+                        日本語
+                    </div>
+
+                    <div class="absolute -bottom-8 -left-6 w-20 h-20 rounded-full bg-primary-container opacity-70">
+                    </div>
+                    <div class="absolute -top-8 -right-6 w-20 h-20 rounded-full bg-primary-container opacity-70"></div>
+
+                    <p class="relative z-10 text-[16px] italic leading-[1.55] text-dark-ink mb-6 mt-8">
+                        “Learning Japanese opens doors to a rich culture and countless opportunities. Start your journey
+                        with us today.”
+                    </p>
+
+                    <div class="relative z-10 flex items-center gap-3">
+                        <div
+                            class="w-11 h-11 rounded-full bg-tertiary text-white flex items-center justify-center font-bold text-base">
+                            T
+                        </div>
+
+                        <div>
+                            <h3 class="text-[21px] font-extrabold text-dark-ink leading-none">Teacher Harumi</h3>
+                            <p class="text-on-surface-variant mt-1 text-[13px]">Founder &amp; Lead Instructor</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <div id="levelPopup"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center z-[999] px-5">
+        <div
+            class="popup-box bg-white rounded-[22px] shadow-ghost max-w-[420px] w-full p-5 sm:p-6 relative border border-primary-container/80">
+
+            <button id="closePopup"
+                class="absolute top-3 right-4 text-on-surface-variant text-2xl hover:text-tertiary transition-colors">
+                &times;
+            </button>
+
+            <div
+                class="inline-block bg-primary-container text-on-tertiary-container px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-widest mb-3">
+                JLPT Class Detail
+            </div>
+
+            <h2 id="popup-level" class="text-[24px] font-extrabold text-dark-ink mb-3">
+                Level Details
+            </h2>
+
+            <div class="bg-surface-container-low p-3 rounded-xl mb-4">
+                <p class="text-on-surface-variant text-[11px] font-semibold uppercase tracking-widest mb-1">
+                    Monthly Fee
+                </p>
+                <p class="text-[22px] font-extrabold text-tertiary">
+                    <span id="popup-fee">180,000</span> MMK
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <div class="flex items-center gap-2 text-tertiary mb-2">
+                    <span class="material-symbols-outlined text-[20px]">schedule</span>
+                    <h3 class="text-[18px] font-bold">Time Slots</h3>
+                </div>
+                <ul id="popup-slots" class="space-y-2"></ul>
+            </div>
+
+            <div class="mb-5">
+                <div class="flex items-center gap-2 text-tertiary mb-2">
+                    <span class="material-symbols-outlined text-[20px]">info</span>
+                    <h3 class="text-[18px] font-bold">Short Note</h3>
+                </div>
+                <ul id="popup-notes" class="space-y-2"></ul>
+            </div>
+
+            <a href="https://t.me/nerdyharu" target="_blank"
+                class="block text-center bg-tertiary text-white px-5 py-3 rounded-xl font-semibold text-[14px] hover:opacity-90 transition-all">
+                Contact on Telegram
+            </a>
+        </div>
+    </div>
+
+
+    <div id="contactPopup"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center z-[999] px-5">
+
+        <div
+            class="popup-box bg-white rounded-[22px] shadow-ghost max-w-[400px] w-full p-5 sm:p-6 relative border border-primary-container/80">
+
+            <button id="closeContactPopup"
+                class="absolute top-3 right-4 text-on-surface-variant text-2xl hover:text-tertiary transition-colors">
+                &times;
+            </button>
+
+            <div
+                class="inline-block bg-primary-container text-on-tertiary-container px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-widest mb-3">
+                Contact Info
+            </div>
+
+            <h2 class="text-[24px] font-extrabold text-dark-ink mb-4">
+                Contact TR Harumi
+            </h2>
+
+            <div class="space-y-3">
+
+
+                <div class="bg-surface-container-low p-3 rounded-xl text-[14px]">
+                    <strong>Phone:</strong> 09780031041
+                </div>
+
+
+                <a href="https://t.me/nerdyharu" target="_blank" class="contact-btn">
+                    Contact on Telegram
+                </a>
+
+
+                <a href="viber://chat?number=+959780031041" class="contact-btn">
+                    Contact on Viber
+                </a>
+
+
+                <a href="mailto:yoonpanchi999@gmail.com" class="contact-btn">
+                    Contact on Gmail
+                </a>
+
+
+                <a href="https://www.facebook.com/share/1bK8csj6Ti/?mibextid=wwXIfr" target="_blank"
+                    class="contact-btn">
+                    Contact on Facebook
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="border-t border-primary-container/80 py-6 mt-6">
+        <div class="max-w-[1080px] mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-5">
+            <div class="text-center md:text-left">
+                <div class="text-[20px] font-extrabold tracking-tight text-dark-ink">
+                    <span class="text-tertiary">TR</span> Harumi
+                </div>
+                <p class="text-[13px] text-on-surface-variant mt-1">
+                    © 2026 TR Harumi. JLPT Preparation.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-5 text-[13px] text-on-surface-variant">
+                <a href="#levels" class="hover:text-tertiary transition-colors">Levels</a>
+                <a href="#about" class="hover:text-tertiary transition-colors">About</a>
+                <button id="footerContactBtn" class="hover:text-tertiary transition-colors">Contact</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
